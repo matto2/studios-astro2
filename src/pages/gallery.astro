@@ -1,0 +1,23 @@
+---
+import Main from "../layouts/Main.astro";
+import { Image } from "astro:assets";
+import image01 from "../assets/image01.jpg";
+import image02 from "../assets/image02.jpg";
+---
+
+<Main>
+  <main class="content-grid">
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <Image src={image01} alt="Decorative" />
+        </div>
+        <div class="swiper-slide">
+          <Image src={image02} alt="Decorative" />
+        </div>
+      </div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+  </main>
+</Main>
