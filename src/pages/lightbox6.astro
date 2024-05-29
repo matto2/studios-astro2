@@ -14,7 +14,11 @@ import image03 from "/src/assets/image03.jpg";
     <Image src={image02} alt="Decorative" />
     <Image src={image03} alt="Decorative" />
 
-    <a data-fslightbox="gallery" href="/image01.jpg">
+    <a
+      data-fslightbox="gallery"
+      data-caption="<h2>An example title.</h2><h3>An example description.</h3>"
+      href="/image01.jpg"
+    >
       <Image src={image01} alt="Decorative" />
     </a>
 
@@ -26,4 +30,10 @@ import image03 from "/src/assets/image03.jpg";
       <Image src={image03} alt="Decorative" />
     </a>
   </div>
+  <style>
+    h2 {
+      font-size: 2rem;
+      font-weight: 700;
+    }
+  </style>
 </Main>

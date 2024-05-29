@@ -1,0 +1,16 @@
+.fslightbox-caption h2 {
+    /* styles for h2 elements within the caption */
+    color: blue;
+    font-size: 1.2rem;
+  }
+  
+  .fslightbox-caption h3 {
+    /* styles for h3 elements within the caption */
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  
+  .fslightbox-caption p {
+    /* styles for p elements within the caption */
+    line-height: 1.5;
+  }
