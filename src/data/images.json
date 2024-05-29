@@ -1,0 +1,21 @@
+[
+    {
+      "src": "image01",
+      "alt": "image01",
+      "width": 800,
+      "height": 600
+    },
+    {
+      "src": "image02",
+      "alt": "image02",
+      "width": 800,
+      "height": 600
+    },
+    {
+      "src": "image03",
+      "alt": "image03",
+      "width": 800,
+      "height": 600
+    }
+  ]
+  

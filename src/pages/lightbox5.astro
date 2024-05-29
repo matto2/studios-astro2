@@ -1,0 +1,29 @@
+---
+import Main from "../layouts/Main.astro";
+import { Image } from "astro:assets";
+import image01 from "/src/assets/image01.jpg";
+import image02 from "/src/assets/image02.jpg";
+import image03 from "/src/assets/image03.jpg";
+---
+
+<Main>
+  <div
+    class="grid md:grid-cols-3 md:gap-x-12 place-items-start max-w-4xl mx-auto mt-12"
+  >
+    <Image src={image01} alt="Decorative" />
+    <Image src={image02} alt="Decorative" />
+    <Image src={image03} alt="Decorative" />
+
+    <a data-fslightbox="gallery" href="/src/assets/image01.jpg">
+      <Image src={image01} alt="Decorative" />
+    </a>
+
+    <a data-fslightbox="gallery" href="/src/assets/image02.jpg">
+      <Image src={image02} alt="Decorative" />
+    </a>
+
+    <a data-fslightbox="gallery" href="/src/assets/image03.jpg">
+      <Image src={image03} alt="Decorative" />
+    </a>
+  </div>
+</Main>

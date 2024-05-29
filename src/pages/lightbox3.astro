@@ -1,0 +1,75 @@
+---
+import Main from "../layouts/Main.astro";
+import { Image } from "astro:assets";
+import image01 from "/src/assets/image01.jpg";
+import image02 from "/src/assets/image02.jpg";
+import image03 from "/src/assets/image03.jpg";
+
+import PhotoSwipe from "photoswipe/dist/photoswipe.min.css";
+import PhotoSwipeUI from "photoswipe/dist/photoswipe-ui-default.min.css";
+import PhotoSwipeCore from "photoswipe/dist/photoswipe-core.min.js";
+---
+
+<Main>
+  <div
+    class="grid md:grid-cols-3 md:gap-x-12 place-items-start max-w-4xl mx-auto mt-12"
+  >
+    <a href={image01}>
+      <Image src={image01} alt="Decorative" />
+    </a>
+    <a href={image02}>
+      <Image src={image02} alt="Decorative" />
+    </a>
+    <a href={image03}>
+      <Image src={image03} alt="Decorative" />
+    </a>
+  </div>
+
+  <script>
+    import PhotoSwipe from "photoswipe/dist/photoswipe-core.min.js";
+    import PhotoSwipeUI_Default from "photoswipe/dist/photoswipe-ui-default.min.js";
+
+    const initPhotoSwipe = () => {
+      const items = [
+        {
+          src: image01,
+          w: 800, // Replace with actual image width
+          h: 600, // Replace with actual image height
+          alt: "Decorative 1",
+        },
+        {
+          src: image02,
+          w: 800,
+          h: 600,
+        },
+        {
+          src: image03,
+          w: 800,
+          h: 600,
+        },
+      ];
+
+      const gallery = new PhotoSwipe(
+        document.getElementById("gallery"), // Replace with actual gallery container ID
+        PhotoSwipeUI_Default,
+        items,
+        {
+          // Optional configuration options for PhotoSwipe
+        }
+      );
+
+      gallery.init();
+
+      const galleryLinks = document.querySelectorAll(".grid a");
+      galleryLinks.forEach((link) => {
+        link.addEventListener("click", (e) => {
+          e.preventDefault();
+          const index = Array.prototype.indexOf.call(galleryLinks, link);
+          gallery.goTo(index);
+        });
+      });
+    };
+
+    window.addEventListener("DOMContentLoaded", initPhotoSwipe);
+  </script>
+</Main>
