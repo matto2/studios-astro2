@@ -1,6 +1,7 @@
 ---
 // Navigation.astro
 const currentPage = Astro.url.pathname;
+console.log(`Current Page: ${currentPage}`);
 ---
 
 <div class="text-center mt-8 mb-4 leading-extrarelaxed">
@@ -9,14 +10,16 @@ const currentPage = Astro.url.pathname;
       class="text-4xl sm:h-24 px-18 sm:text-5xl leading-tight md:text-6xl lg:text-7xl font-delaGothic bg-clip-text text-transparent bg-gradient-to-r from-blue-700 to-green-400"
     >
       O&apos;Leary Studios
-    </h1></a
-  >
+    </h1>
+  </a>
 
   <nav class="flex justify-center space-x-8 my-8">
     <a
       href="/"
       class={`text-lg font-medium pb-2 border-b-4 text-slate-300 ${
-        currentPage === "/" ? "border-blue-500" : "border-transparent"
+        currentPage === "/" || currentPage === "/index.html"
+          ? "border-blue-500"
+          : "border-transparent"
       }`}
     >
       Paintings
@@ -24,7 +27,9 @@ const currentPage = Astro.url.pathname;
     <a
       href="/about"
       class={`text-lg font-medium pb-2 border-b-4 text-slate-300 ${
-        currentPage === "/about" ? "border-blue-500" : "border-transparent"
+        currentPage === "/about" || currentPage === "/about/index.html"
+          ? "border-blue-500"
+          : "border-transparent"
       }`}
     >
       About
