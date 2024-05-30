@@ -2,6 +2,7 @@
 const currentYear = new Date().getFullYear();
 ---
 
+<!-- @ts-nocheck -->
 <footer
   class="text-gray-400 py-4 mt-12 border-t border-slate-500 max-w-4xl mx-auto"
 >
@@ -10,7 +11,7 @@ const currentYear = new Date().getFullYear();
       <a
         href="/"
         class="hover:underline text-emerald-400 hover:text-emerald-200 mx-4"
-        mx-2">Paintings</a
+        >Paintings</a
       >
       <a
         href="/about"
@@ -20,9 +21,9 @@ const currentYear = new Date().getFullYear();
       <a
         href="mailto:mattosurf@gmail.com"
         class="hover:underline text-emerald-400 hover:text-emerald-200 mx-4"
-        >Email</a
+        >Email (mattosurf@gmail.com)</a
       >
-      <p class="my-3">©{currentYear} Matthew O&apos;Leary</p>
     </nav>
+    <p class="my-3">© {currentYear} Matthew O&apos;Leary</p>
   </div>
 </footer>

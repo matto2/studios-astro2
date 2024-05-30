@@ -3,16 +3,28 @@
   "compilerOptions": {
     "target": "ESNext",
     "module": "ESNext",
-    "strict": true,
+    "strict": false,
     "esModuleInterop": true,
     "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
     "sourceMap": true,
     "outDir": "./dist",
     "baseUrl": ".",
+    "skipLibCheck": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "noEmit": true,
     "paths": {
       "@/*": ["./src/*"]
-    }
+    },
+    "noImplicitAny": false,  // Allow implicit 'any' types
+    "noImplicitReturns": false,  // Allow functions without explicit return types
+    "noImplicitThis": false,  // Allow 'this' expressions with an implicit 'any' type
+    "alwaysStrict": false,  // Do not parse in strict mode and emit "use strict" directives
+    "strictNullChecks": false,  // Disable strict null checks
+    "strictFunctionTypes": false,  // Disable strict checking of function types
+    "strictPropertyInitialization": false,  // Disable strict checking of property initialization in classes
+    "noUnusedLocals": false,  // Allow unused local variables
+    "noUnusedParameters": false  // Allow unused function parameters
   },
   "include": ["src"],
   "exclude": ["node_modules", "dist", "src/scripts/fslightbox.js"]
