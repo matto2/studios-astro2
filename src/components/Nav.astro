@@ -1,6 +1,6 @@
 ---
 // Navigation.astro
-const currentPage = Astro.url.pathname;
+const currentPage = Astro.url.pathname.replace(/\/$/, ""); // Remove trailing slash if it exists
 console.log(`Current Page: ${currentPage}`);
 ---
 
@@ -17,19 +17,15 @@ console.log(`Current Page: ${currentPage}`);
     <a
       href="/"
       class={`text-lg font-medium pb-2 border-b-4 text-slate-300 ${
-        currentPage === "/" || currentPage === "/index.html"
-          ? "border-blue-500"
-          : "border-transparent"
+        currentPage === "" ? "border-blue-500" : "border-transparent"
       }`}
     >
       Paintings
     </a>
     <a
-      href="/about"
+      href="/about/"
       class={`text-lg font-medium pb-2 border-b-4 text-slate-300 ${
-        currentPage === "/about" || currentPage === "/about/index.html"
-          ? "border-blue-500"
-          : "border-transparent"
+        currentPage === "/about" ? "border-blue-500" : "border-transparent"
       }`}
     >
       About
