@@ -1,0 +1,12 @@
+/* src/styles/global.css */
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap');
+
+html {
+  font-family: 'Dela Gothic One', sans-serif;
+}
+
+/* You can also add custom styles here if needed */

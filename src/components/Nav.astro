@@ -1,0 +1,33 @@
+---
+// Navigation.astro
+const currentPage = Astro.url.pathname;
+---
+
+<div class="text-center mt-8 mb-4 leading-extrarelaxed">
+  <a href="/">
+    <h1
+      class="text-4xl sm:h-24 px-18 sm:text-5xl leading-tight md:text-6xl lg:text-7xl font-delaGothic bg-clip-text text-transparent bg-gradient-to-r from-blue-700 to-green-400"
+    >
+      O&apos;Leary Studios
+    </h1></a
+  >
+
+  <nav class="flex justify-center space-x-8 my-8">
+    <a
+      href="/"
+      class={`text-lg font-medium pb-2 border-b-4 text-slate-300 ${
+        currentPage === "/" ? "border-blue-500" : "border-transparent"
+      }`}
+    >
+      Paintings
+    </a>
+    <a
+      href="/about"
+      class={`text-lg font-medium pb-2 border-b-4 text-slate-300 ${
+        currentPage === "/about" ? "border-blue-500" : "border-transparent"
+      }`}
+    >
+      About
+    </a>
+  </nav>
+</div>
