@@ -4,8 +4,13 @@
 @import "tailwindcss/utilities";
 
 @import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
 
 html {
+  font-family: 'Nunito', sans-serif;
+}
+
+h1, h2, h3 {
   font-family: 'Dela Gothic One', sans-serif;
 }
 
